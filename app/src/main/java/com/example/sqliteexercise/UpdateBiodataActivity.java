@@ -20,6 +20,7 @@ public class UpdateBiodataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_biodata);
         dbHelper = new DataHelper(this);
+        text1 = (EditText) findViewById(R.id.editText1);
         text2 = (EditText) findViewById(R.id.editText2);
         text3 = (EditText) findViewById(R.id.editText3);
         text4 = (EditText) findViewById(R.id.editText4);
@@ -45,10 +46,10 @@ public class UpdateBiodataActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 db.execSQL("update biodata set nama='"+
-                        text2.getText().toString() +"', tgl='" +
+                        text5.getText().toString() +"', tgl='" +
                         text3.getText().toString()+"', jk='"+
                         text4.getText().toString() +"', alamat='" +
-                        text5.getText().toString() + "' where no='" +
+                        text2.getText().toString() + "' where no='" +
                         text1.getText().toString()+"'");
                 Toast.makeText(getApplicationContext(), "Berhasil", Toast.LENGTH_LONG).show();
                 MainActivity.ma.RefreshList();
