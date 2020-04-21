@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         ListView01.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
                 final String selection = daftar[arg2];
-                final CharSequence[] dialogitem = {"Lihat Biodata", "Update Biodata", "Hapus Biodata"};
+                final CharSequence[] dialogitem = {"Lihat Kontak", "Update Kontak", "Hapus Kontak"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Pilihan");
                 builder.setItems(dialogitem, new DialogInterface.OnClickListener() {
