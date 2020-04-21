@@ -11,9 +11,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="104dp"
+        android:layout_marginRight="90dp"
+        android:visibility="invisible"
         android:layout_marginTop="20dp"
         android:text="TextView" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profil"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textAlignment="center"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -46,7 +54,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
         android:layout_below="@+id/textView4"
         android:layout_marginTop="20dp"
         android:text="TextView" />
@@ -58,7 +66,7 @@
         android:layout_alignBaseline="@+id/textView5"
         android:layout_alignBottom="@+id/textView5"
         android:layout_alignLeft="@+id/TextView03"
-        android:text="Alamat" />
+        android:text="Alamat                :" />
 
     <TextView
         android:id="@+id/TextView03"
@@ -67,7 +75,7 @@
         android:layout_alignBaseline="@+id/textView4"
         android:layout_alignBottom="@+id/textView4"
         android:layout_alignLeft="@+id/TextView04"
-        android:text="Jenis Kelamin" />
+        android:text="Email                   :" />
 
     <TextView
         android:id="@+id/TextView04"
@@ -76,7 +84,7 @@
         android:layout_alignBaseline="@+id/textView3"
         android:layout_alignBottom="@+id/textView3"
         android:layout_alignLeft="@+id/TextView02"
-        android:text="Tanggal Lahir" />
+        android:text="Nomor Telepon:" />
 
     <TextView
         android:id="@+id/TextView02"
@@ -85,7 +93,7 @@
         android:layout_alignBaseline="@+id/textView2"
         android:layout_alignBottom="@+id/textView2"
         android:layout_alignLeft="@+id/TextView01"
-        android:text="Nama" />
+        android:text="Nama                  :" />
 
     <TextView
         android:id="@+id/TextView01"
@@ -93,15 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView2"
         android:layout_alignParentLeft="true"
+        android:visibility="invisible"
         android:text="Nomor" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/TextView05"
-        android:layout_below="@+id/TextView05"
-        android:layout_marginTop="34dp"
-        android:text="Kembali"
-        style="?android:attr/borderlessButtonStyle" />
 </RelativeLayout>

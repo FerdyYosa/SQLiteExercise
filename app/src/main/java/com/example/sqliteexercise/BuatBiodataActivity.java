@@ -30,16 +30,18 @@ public class BuatBiodataActivity extends AppCompatActivity {
         ton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                // TODO Auto-generated method stub
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                db.execSQL("insert into biodata(nama, tgl, jk, alamat) values('" +
-                        text2.getText().toString() + "','" +
-                        text3.getText().toString() + "','" +
-                        text4.getText().toString() + "','" +
-                        text5.getText().toString() + "')");
-                Toast.makeText(getApplicationContext(), "Berhasil", Toast.LENGTH_LONG).show();
-                MainActivity.ma.RefreshList();
-                finish();
+                if(text2.getText().toString().equals("")||text3.getText().toString().equals("")||text4.getText().toString().equals("")||text5.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(), "Data Harus Lengkap", Toast.LENGTH_LONG).show();
+                } else {
+                    SQLiteDatabase db = dbHelper.getWritableDatabase();
+                    db.execSQL("insert into biodata(nama, tgl, jk, alamat) values('" +
+                            text2.getText().toString() + "','" +
+                            text3.getText().toString() + "','" +
+                            text4.getText().toString() + "','" +
+                            text5.getText().toString() + "')");
+                    MainActivity.ma.RefreshList();
+                    finish();
+                }
             }
         });
     }

@@ -31,7 +31,7 @@ public class UpdateBiodataActivity extends AppCompatActivity {
         if (cursor.getCount()>0)
         {
             cursor.moveToPosition(0);
-            text2.setText(cursor.getString(0).toString());
+            text2.setText(cursor.getString(4).toString());
             text3.setText(cursor.getString(1).toString());
             text4.setText(cursor.getString(2).toString());
             text5.setText(cursor.getString(3).toString());

@@ -12,7 +12,6 @@ import android.widget.TextView;
 public class LihatBiodataActivity extends AppCompatActivity {
     protected Cursor cursor;
     DataHelper dbHelper;
-    Button ton2;
     TextView text1, text2, text3, text4, text5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +36,5 @@ public class LihatBiodataActivity extends AppCompatActivity {
             text4.setText(cursor.getString(3).toString());
             text5.setText(cursor.getString(4).toString());
         }
-        ton2 = (Button) findViewById(R.id.button1);
-        ton2.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                // TODO Auto-generated method stub
-                finish();
-            }
-        });
     }
 }
